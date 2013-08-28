@@ -10,7 +10,7 @@ timezone:    Europe/Budapest
 future:      true
 show_drafts: nil
 limit_posts: 0
-pygments:    false
+pygments: true
 
 relative_permalinks: true
 
@@ -23,7 +23,7 @@ textile_ext:   textile
 
 excerpt_separator: "\n\n"
 
-safe:        false
+safe:        true
 host:        0.0.0.0
 port:        4000
 baseurl:     /
