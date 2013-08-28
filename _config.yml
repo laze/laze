@@ -10,7 +10,7 @@ timezone:    Europe/Budapest
 future:      true
 show_drafts: nil
 limit_posts: 0
-pygments: true
+pygments: false
 
 relative_permalinks: true
 
