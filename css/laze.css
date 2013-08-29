@@ -1,4 +1,4 @@
-body {
+html, body {
     font-family: 'Oxygen', sans-serif;
 }
 
@@ -36,7 +36,7 @@ body {
     right: 0;
     position: absolute;
     height: 80px;
-    padding: 0;
+    padding: 0 0 0 10px;
     width: 100%;
 }
 
@@ -44,6 +44,24 @@ body {
     font-size: 2.25em;
     color: #cb187c;
     text-transform: uppercase;
-    letter-spacing: -0.1em;
+    /*letter-spacing: -0.1em;*/
     font-weight: 300;
+}
+
+.navbar {
+    border-radius: 0;
+}
+
+p {
+    font-size: 1em;
+}
+
+blockquote {
+    padding: 10px 20px 10px 10px
+}
+
+blockquote p {
+    font-family: 'Oxygen', sans-serif;
+    font-size: 1em;
+    font-style: italic;
 }

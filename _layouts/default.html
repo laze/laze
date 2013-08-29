@@ -13,6 +13,8 @@
     <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700&subset=latin,latin-ext' rel='stylesheet'
           type='text/css'>
 
+    <script src="//code.jquery.com/jquery.js"></script>
+
     <!-- Latest compiled and minified JavaScript -->
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
@@ -31,12 +33,36 @@
         </div>
         <div class="col-md-10 title visible-lg visible-md">
             <span>{{ page.title }}</span>
+            <ul class="nav nav-pills">
+            {% if page.url == '/index.html' %}
+                {% for node in site.pages %}
+                    {% if node.url != page.url %}
+                    <li><a href="{{node.url}}">{{node.title}}</a></li>
+                    {% endif %}
+                {% endfor %}
+            {% else %}
+                <li><a href="/index.html"><i class="icon icon-angle-left"></i>Vissza a kezdőoldalra</a></li>
+            {% endif %}
+            </ul>
         </div>
     </div>
-    <div class="row visible-xs visible-sm title">
-        {{ page.title }}
+    <div class="row visible-xs visible-sm title dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{ page.title }}</a>
+        <ul class="dropdown-menu">
+            {% if page.url == '/index.html' %}
+                {% for node in site.pages %}
+                    {% if node.url != page.url %}
+                    <li><a href="{{node.url}}">{{node.title}}</a></li>
+                    {% endif %}
+                {% endfor %}
+            {% else %}
+                <li><a href="/index.html"><i class="icon icon-angle-left"></i>Vissza a kezdőoldalra</a></li>
+            {% endif %}
+        </ul>
     </div>
 </div>
-{{ content }}
+<div class="container" style="height: 100%;">
+    {{ content }}
+</div>
 </body>
 </html>
