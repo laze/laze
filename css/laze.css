@@ -1,3 +1,49 @@
 body {
     font-family: 'Oxygen', sans-serif;
 }
+
+.row.header {
+    height: 12em;
+}
+
+.row.header>div {
+    height: inherit;
+}
+
+.row.header>div.cover {
+    background-color: transparent;
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+.row.header>div.cover>div {
+    width: 80px;
+    height: 80px;
+    background: #57caf3 url(/img/laze.png) no-repeat 0 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+}
+
+.row.header>div.title>span {
+    font-size: 2.25em;
+    color: #cb187c;
+    text-transform: uppercase;
+    letter-spacing: -0.1em;
+    font-weight: 300;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    height: 80px;
+    padding: 0;
+    width: 100%;
+}
+
+.row.title {
+    font-size: 2.25em;
+    color: #cb187c;
+    text-transform: uppercase;
+    letter-spacing: -0.1em;
+    font-weight: 300;
+}
