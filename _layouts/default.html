@@ -10,9 +10,11 @@
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
+    <!-- Google Fonts API -->
     <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700&subset=latin,latin-ext' rel='stylesheet'
           type='text/css'>
 
+    <!-- jQuery -->
     <script src="//code.jquery.com/jquery.js"></script>
 
     <!-- Latest compiled and minified JavaScript -->
@@ -23,6 +25,21 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/laze.css">
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-415320-11']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
 
 </head>
 <body>
@@ -64,5 +81,6 @@
 <div class="container" style="height: 100%;">
     {{ content }}
 </div>
+XCY
 </body>
 </html>
