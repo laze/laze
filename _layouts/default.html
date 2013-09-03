@@ -89,7 +89,7 @@
     <div class="twitter">&nbsp;Ide jön a twitter üzenet...&nbsp;</div>
 </div>
 <div class="content visible-md visible-lg">
-    <div class="menu">
+    <div class="menu" style="float: none; clear: both;">
         <div class="title">{{ page.title }}</div>
         <ul>
             {% for node in site.pages %}
@@ -99,7 +99,7 @@
             {% endfor %}
         </ul>
     </div>
-    <div>
+    <div style="clear: both; border: 1px solid lime;">
     {{ content }}
     </div>
 </div>
@@ -112,11 +112,31 @@
 </div>
 <div class="content-header visible-xs visible-sm">
     <div class="title">{{ page.title }}</div>
+    <div class="shortcut">
+        <div class="flip-container" ontouchstart="this.classList.toggle('hover');" style="float: left;">
+            <a class="flipper" href="#menu">
+                <div class="front">
+                    <!-- front content -->
+                    <i class="icon-angle-down"></i>
+                </div>
+                <div class="back">
+                    <!-- back content -->
+                    <i class="icon-chevron-down" style="color: #ffffff;"></i>
+                </div>
+            </a>
+        </div>
+        <span>Menü</span>
+    </div>
 </div>
 <div class="content-container visible-xs visible-sm">
     {{ content }}
+    <a name="menu"/>
+    <div class="content-menu">
+        <ul>
+            {% for node in site.pages %}{% if node.url != page.url %}<li><a href="{{node.url}}">{{node.title}}</a></li>{% endif %}{% endfor %}
+        </ul>
+    </div>
 </div>
-
 
 </body>
 </html>
