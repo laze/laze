@@ -42,45 +42,84 @@
     </script>
 
 </head>
-<body>
-<div class="container">
-    <div class="row header">
-        <div class="col-md-2 cover" style="background-image: url(/img/{{ page.header }});">
-            <div>&nbsp;</div>
-        </div>
-        <div class="col-md-10 title visible-lg visible-md">
-            <span>{{ page.title }}</span>
-            <ul class="nav nav-pills">
-            {% if page.url == '/index.html' %}
-                {% for node in site.pages %}
-                    {% if node.url != page.url %}
-                    <li><a href="{{node.url}}">{{node.title}}</a></li>
-                    {% endif %}
-                {% endfor %}
-            {% else %}
-                <li><a href="/index.html"><i class="icon icon-angle-left"></i>Vissza a kezdőoldalra</a></li>
-            {% endif %}
-            </ul>
-        </div>
+<body{% if page.background %} style="background-image: url(/img/{{ page.background }});{% endif %}">
+<!-- desktop -->
+<div class="header visible-md visible-lg">
+    <div class="cover"{% if page.header %} style="background-image: url(/img/{{ page.header }});"{% endif %}>
+        <div>&nbsp;</div>
     </div>
-    <div class="row visible-xs visible-sm title dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{ page.title }}</a>
-        <ul class="dropdown-menu">
-            {% if page.url == '/index.html' %}
-                {% for node in site.pages %}
-                    {% if node.url != page.url %}
-                    <li><a href="{{node.url}}">{{node.title}}</a></li>
-                    {% endif %}
-                {% endfor %}
-            {% else %}
-                <li><a href="/index.html"><i class="icon icon-angle-left"></i>Vissza a kezdőoldalra</a></li>
+</div>
+<div class="social visible-md visible-lg">
+    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+        <a class="flipper" href="http://lnkd.in/_ngmiH">
+            <div class="front">
+                <!-- front content -->
+                <i class="icon-linkedin-sign"></i>
+            </div>
+            <div class="back">
+                <!-- back content -->
+                <i class="icon-linkedin" style="color: #ffffff;"></i>
+            </div>
+        </a>
+    </div>
+    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+        <a class="flipper" href="http://facebook.com/laze.hu">
+            <div class="front">
+                <!-- front content -->
+                <i class="icon-facebook-sign"></i>
+            </div>
+            <div class="back">
+                <!-- back content -->
+                <i class="icon-facebook" style="color: #ffffff;"></i>
+            </div>
+        </a>
+    </div>
+    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+        <a class="flipper" href="http://twitter.com/laze">
+            <div class="front">
+                <!-- front content -->
+                <i class="icon-twitter-sign"></i>
+            </div>
+            <div class="back">
+                <!-- back content -->
+                <i class="icon-twitter" style="color: #ffffff;"></i>
+            </div>
+        </a>
+    </div>
+    <div class="twitter">&nbsp;Ide jön a twitter üzenet...&nbsp;</div>
+</div>
+<div class="content visible-md visible-lg">
+    <div class="menu">
+        <div class="title">{{ page.title }}</div>
+        <ul>
+            {% for node in site.pages %}
+            {% if node.url != page.url %}
+            <li><a href="{{node.url}}">{{node.title}}</a></li>
             {% endif %}
+            {% endfor %}
         </ul>
     </div>
-</div>
-<div class="container" style="height: 100%;">
+    <div>
     {{ content }}
+    </div>
 </div>
-XCY
+
+<!-- pad or mobile device -->
+<div class="header visible-xs visible-sm">
+    <div class="cover"{% if page.header %} style="background-image: url(/img/{{ page.header }});"{% endif %}>
+        <div>&nbsp;</div>
+    </div>
+</div>
+<div class="content visible-xs visible-sm">
+    <div class="menu">
+        <div class="title">{{ page.title }}</div>
+
+    </div>
+    <div>
+        {{ content }}
+    </div>
+</div>
+
+
 </body>
 </html>

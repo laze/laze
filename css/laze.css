@@ -2,58 +2,205 @@ html, body {
     font-family: 'Oxygen', sans-serif;
 }
 
-.row.header {
-    height: 12em;
-}
-
-.row.header>div {
-    height: inherit;
-}
-
-.row.header>div.cover {
+body {
     background-color: transparent;
     background-position: top left;
     background-repeat: no-repeat;
     background-size: cover
 }
 
-.row.header>div.cover>div {
+i.icon {
+    color: #57caf3;
+}
+
+a:hover>i.icon {
+    color: #57caf3;
+    text-decoration: none;
+}
+
+div.header {
+    height: 180px;
+    width: 180px;
+    float: left;
+}
+
+.visible-xs.header {
+    height: 100px;
+}
+
+div.header>div {
+    height: inherit;
+}
+
+div.header>div.cover {
+    background-color: transparent;
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+div.header>div.cover>div {
     width: 80px;
     height: 80px;
     background: #57caf3 url(/img/laze.png) no-repeat 0 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
+    left: 100px;
+    top: 100px;
+    position: relative;
 }
 
-.row.header>div.title>span {
-    font-size: 2.25em;
+.visible-xs.header>div.cover>div {
+    top: 10px;
+}
+
+div.social {
+    height: 40px;
+    margin-left: 180px;
+}
+
+div.social>div {
+    float: left;
+    display: block;
+    height: 20px;
+    min-width: 20px;
+    margin: 10px 0 10px 10px;
+    text-align: center;
+
+    perspective: 1000;
+}
+
+div.social>.twitter {
+    background-color: #ffffff;
+    color: #57caf3;
+    font-weight: 300;
+    font-size: 12px;
+    font-style: italic;
+    line-height: 20px;
+    margin-left: 0;
+}
+
+div.social .flip-container {
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    perspective: 1000;
+}
+
+
+div.social .flip-container:hover .flipper, .flip-container.hover .flipper, #flip-toggle.flip .flipper {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+div.social .flip-container, .front, .back {
+    width: 20px;
+    height: 20px;
+}
+
+div.social .flipper {
+    -webkit-transition: 0.4s;
+    -webkit-transform-style: preserve-3d;
+
+    -moz-transition: 0.4s;
+    -moz-transform-style: preserve-3d;
+
+    transition: 0.4s;
+    transform-style: preserve-3d;
+
+    position: relative;
+    display: block;
+}
+
+div.social .front, div.social .back {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    font-size: 14px;
+    text-align: center;
+    line-height: 20px;
+}
+
+div.social .front {
+    background: #ffffff;
+    color: #57caf3;
+    z-index: 2;
+}
+
+div.social .back {
+    background: #57caf3;
+    color: #ffffff;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+div.content {
+    background-color: #ffffff;
+    position: absolute;
+    top: 100px;
+    left: 180px;
+    margin-right: 180px;
+}
+
+div.content.visible-xs, div.content.visible-sm {
+    background-color: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 180px;
+}
+
+div.content>div.menu {
+    padding: 0;
+    height: 45px;
+}
+
+div.content>div.menu>.title {
+    font-size: 32px;
     color: #cb187c;
     text-transform: uppercase;
-    letter-spacing: -0.1em;
     font-weight: 300;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    height: 80px;
-    padding: 0 0 0 10px;
-    width: 100%;
+    padding-left: 8px;
+    margin-top: -1px;
+    height: 45px;
+    display: inline-block;
+    float: left;
 }
 
-.row.title {
-    font-size: 2.25em;
+div.content.visible-xs>div.menu>.title, div.content.visible-sm>div.menu>.title {
+    font-size: 32px;
     color: #cb187c;
     text-transform: uppercase;
-    /*letter-spacing: -0.1em;*/
     font-weight: 300;
+    padding-left: 8px;
+    margin-top: 10px;
+    height: 45px
 }
 
-.navbar {
-    border-radius: 0;
+div.content>div.menu>ul {
+    list-style: none;
+    height: 45px;
+    padding: 10px 0 0 0;
+    display: inline-block;
 }
 
-p {
-    font-size: 1em;
+div.content>div.menu>ul li {
+    background: #57caf3;
+    float: left;
+    height: 26px;
+    line-height: 26px;
+    margin-left: 10px;
+    padding: 0 10px 0 10px;
+}
+
+div.content>div.menu>ul li a {
+    color: #ffffff;
+    text-transform: uppercase;
 }
 
 blockquote {
