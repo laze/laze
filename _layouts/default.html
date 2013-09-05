@@ -89,7 +89,7 @@
     <div class="twitter">&nbsp;Ide jön a twitter üzenet...&nbsp;</div>
 </div>
 <div class="content visible-md visible-lg">
-    <div class="menu" style="float: none; clear: both;">
+    <div class="menu">
         <div class="title">{{ page.title }}</div>
         <ul>
             {% for node in site.pages %}
@@ -99,13 +99,13 @@
             {% endfor %}
         </ul>
     </div>
-    <div style="clear: both; border: 1px solid lime;">
+    <div style="border: 1px solid lime;">
     {{ content }}
     </div>
 </div>
 
 <!-- pad or mobile device -->
-<div class="header visible-xs visible-sm">
+<div class="header small visible-xs visible-sm">
     <div class="cover"{% if page.header %} style="background-image: url(/img/{{ page.header }});"{% endif %}>
         <div>&nbsp;</div>
     </div>
@@ -137,6 +137,6 @@
         </ul>
     </div>
 </div>
-
+{% include footer.html %}
 </body>
 </html>
