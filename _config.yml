@@ -3,7 +3,7 @@ destination: ./_site
 plugins:     ./_plugins
 layouts:     ./_layouts
 include:     ['.htaccess']
-exclude:     []
+exclude:     ['rss.xml']
 keep_files:  ['.git','.svn']
 timezone:    Europe/Budapest
 
@@ -22,12 +22,19 @@ textile_ext:   textile
 
 excerpt_separator: "\n\n"
 
-safe:        true
+safe:        false
 host:        0.0.0.0
 port:        4000
 baseurl:     /
 url:         http://localhost:4000
 lsi:         false
+
+# RSS
+name: matic&middot;laze.hu
+url: http://laze.hu
+description: "LAZE vagyok, ez az oldalam. Itt tal&aacute;lod az &ouml;n&eacute;letrajzom, a referenci&aacute;im. Posztjaim szem&eacute;lyes v&eacute;lem&eacute;nyemet t&uuml;kr&ouml;zik."
+author: laze
+copyright: Creative Commons - Attribution-NonCommercial-ShareAlike 3.0 Unported
 
 #maruku:
 #  use_tex:    false

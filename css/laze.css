@@ -1,12 +1,15 @@
 html, body {
     font-family: 'Oxygen', sans-serif;
+    padding-bottom: 125px;
+    height: 100%;
 }
 
 body {
+    background-attachment: fixed;
     background-color: transparent;
     background-position: top left;
     background-repeat: no-repeat;
-    background-size: cover
+    background-size: cover;
 }
 
 i.icon {
@@ -36,20 +39,30 @@ div.header>div.cover {
     background-color: transparent;
     background-position: top left;
     background-repeat: no-repeat;
-    background-size: cover
+    background-size: cover;
+    padding-top: 100px;
+}
+
+div.header.small>div.cover {
+    background-color: transparent;
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 10px;
 }
 
 div.header>div.cover>div {
     width: 80px;
     height: 80px;
     background: #57caf3 url(/img/laze.png) no-repeat 0 0;
-    left: 100px;
-    top: 100px;
-    position: relative;
+    margin: 0 0 0 100px;
+    /*left: 100px;*/
+    /*top: 100px;*/
+    /*position: relative;*/
 }
 
 div.header.small>div.cover>div {
-    top: 10px;
+    /*margin-top: 0;*/
 }
 
 div.social {
@@ -173,7 +186,7 @@ div.content>div.menu>.title {
     float: left;
 }
 
-div.content>div.menu>ul, div.content-menu>ul {
+div.content>div.menu>nav, div.content-menu>nav {
     list-style: none;
     height: 45px;
     padding: 10px 0 0 0;
@@ -181,12 +194,14 @@ div.content>div.menu>ul, div.content-menu>ul {
     display: inline-block;
 }
 
-div.content-menu>ul {
+div.content-menu>nav {
     height: auto;
 }
 
-div.content>div.menu>ul li, div.content-menu>ul li {
+div.content>div.menu>nav a, div.content-menu>nav a {
     background: #57caf3;
+    color: #ffffff;
+    text-transform: uppercase;
     float: left;
     height: 26px;
     line-height: 26px;
@@ -194,23 +209,19 @@ div.content>div.menu>ul li, div.content-menu>ul li {
     padding: 0 10px 0 10px;
 }
 
-div.content-menu>ul li {
+div.content-menu>nav a {
     float: none;
     margin-top: 10px;
 }
 
-div.content>div.menu>ul li a, div.content-menu>ul li a {
-    color: #ffffff;
-    text-transform: uppercase;
-}
-
 div.content-header {
     background-color: #ffffff;
-    position: absolute;
-    top: 0;
-    left: 180px;
-    height: 100px;
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 180px;*/
+    height: 90px;
     width: 100%;
+    margin-left: 180px;
 }
 
 div.content-header>.title {
@@ -218,8 +229,9 @@ div.content-header>.title {
     color: #cb187c;
     text-transform: uppercase;
     font-weight: 300;
-    padding-left: 8px;
-    margin-top: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    /*margin-top: 10px;*/
     height: 45px;
 
     text-wrap: none;
@@ -227,6 +239,7 @@ div.content-header>.title {
 }
 
 div.content-header>div.shortcut {
+    margin-top: 10px;
     margin-left: 10px;
 }
 
@@ -241,9 +254,90 @@ div.content-header>div.shortcut>span {
 
 div.content-container {
     background-color: #ffffff;
-    position: absolute;
-    top: 100px;
-    left: 0;
+    clear: both;
+}
+
+div.posts {
+    margin: 0 10px;
+    padding-bottom: 1px;
+}
+
+div.posts>article {
+    float: none;
+    margin-bottom: 10px;
+}
+
+div.posts>article.emphasized>img {
+    float: left;
+    margin-right: 10px;
+    height: 80px;
+    width: 80px;
+}
+
+div.posts>article.emphasized>h1 {
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #57caf3;
+    float: none;
+}
+
+div.posts>article.emphasized>h1>a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+div.posts>article.emphasized>h1>a:hover {
+    color: #57caf3;
+}
+
+div.posts>article>h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: #323232;
+}
+
+div.posts>article>h1>a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+div.posts>article>h1>a:hover {
+    color: #57caf3;
+}
+
+div.posts>article.emphasized>p {
+    display: block;
+    margin: 0 0 0 10px;
+    padding: 0;
+    font-size: 12px;
+    color: #323232;
+    height: 40px;
+    text-overflow: ellipsis;
+}
+
+div.posts>article span.meta {
+    font-size: 10px;
+    font-weight: 300;
+    color: #323232;
+    height: 12px;
+    line-height: 12px;
+    text-transform: uppercase;
+}
+
+div.posts>article span.meta i {
+    font-size: 12px;
+}
+
+div.posts>article span.meta span {
+    margin-left: 10px;
 }
 
 blockquote {
@@ -256,17 +350,60 @@ blockquote p {
     font-style: italic;
 }
 
+div.content-container>article {
+    margin: 0 10px 10px 10px;
+    padding-bottom: 1px;
+}
+
+div.content-container>article .meta {
+    margin: 0 0 0 180px;
+    font-size: 12px;
+    line-height: 12px;
+    color: #cb187c;
+}
+
+div.content-container>article .meta span {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+div.content-container>article .meta i {
+    font-size: 14px;
+}
+
+div.content-container>article p {
+    margin-top: 10px;
+}
+
+div.content-container>article h2 {
+    margin: 0 0 0 10px;
+    padding: 0;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+div.content-container>article h3 {
+    margin: 0 0 0 20px;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
 footer {
-    background-color: #53469c;
+    display: block;
+    position: absolute;
+    background-color: #cb187c;
     padding: 10px 10px 10px 0;
-    color: #ffffff;
+    color: #232323;
     font-size: 11px;
     float: none;
     clear: both;
-    min-height: 180px;
-    max-width: 90em;
-    margin-top: 80px;
-    margin-left: 180px;
+    height: 125px;
+    margin: 80px 180px 0 180px;
+    /*width: 90em;*/
+    /*bottom: 0;*/
 }
 
 footer>div {

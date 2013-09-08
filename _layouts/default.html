@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -42,7 +42,7 @@
     </script>
 
 </head>
-<body{% if page.background %} style="background-image: url(/img/{{ page.background }});{% endif %}">
+<body style="{% if page.background %} background-image: url(/img/{{ page.background }});{% endif %}">
 <!-- desktop -->
 <div class="header visible-md visible-lg">
     <div class="cover"{% if page.header %} style="background-image: url(/img/{{ page.header }});"{% endif %}>
@@ -91,15 +91,15 @@
 <div class="content visible-md visible-lg">
     <div class="menu">
         <div class="title">{{ page.title }}</div>
-        <ul>
+        <nav>
             {% for node in site.pages %}
-            {% if node.url != page.url %}
-            <li><a href="{{node.url}}">{{node.title}}</a></li>
+            {% if node.url != page.url && node.url contains 'html' %}
+            <a href="{{node.url}}">{{node.title}}</a>
             {% endif %}
             {% endfor %}
-        </ul>
+        </nav>
     </div>
-    <div style="border: 1px solid lime;">
+    <div>
     {{ content }}
     </div>
 </div>
@@ -132,9 +132,9 @@
     {{ content }}
     <a name="menu"/>
     <div class="content-menu">
-        <ul>
-            {% for node in site.pages %}{% if node.url != page.url %}<li><a href="{{node.url}}">{{node.title}}</a></li>{% endif %}{% endfor %}
-        </ul>
+        <nav>
+            {% for node in site.pages %}{% if node.url != page.url %}<a href="{{node.url}}">{{node.title}}</a>{% endif %}{% endfor %}
+        </nav>
     </div>
 </div>
 {% include footer.html %}

@@ -1,13 +1,38 @@
 ---
 layout: default
-title: Renesz&aacute;nsz
-background: background-missionpeak.jpg
+<!--title: Renesz&aacute;nsz-->
+title: God Morgon!
+background: background-alejandroescamilla_somethingpretty.jpg
 <!--header: header-1.png-->
 ---
-<ul class="posts">
+<div class="posts">
     {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
-        {{ post.excerpt }}
-    </li>
+    {% if post.emphasized == true %}
+    <article class="emphasized">
+        {% if post.thumbnail %}
+            <img src="/img/{{ post.thumbnail}}"/>
+        {% else %}
+            <img src="/img/thumbnail-empty.png"/>
+        {% endif %}
+        <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+            {{ post.excerpt }}
+        <span class="meta">
+            <span><i class="icon-calendar-empty"></i> {{ post.date | date_to_string }}</span>
+            <span><i class="icon-tags"></i> {{ post.tags | array_to_sentence_string }}</span>
+        </span>
+    </article>
+    {% endif %}
     {% endfor %}
-</ul>
+    {% for post in site.posts %}
+    {% if post.emphasized == false%}
+    <article>
+        <h1><a href="{{ post.url }}">{{ post.title }}</a>
+        <span class="meta">
+            <span><i class="icon-calendar-empty"></i> {{ post.date | date_to_string }}</span>
+            <span><i class="icon-tags"></i> {{ post.tags | array_to_sentence_string }}</span>
+        </span>
+        </h1>
+    </article>
+    {% endif %}
+    {% endfor %}
+</div>

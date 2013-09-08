@@ -3,6 +3,13 @@ layout: post
 title:  "Welcome to Jekyll!"
 date:   2013-08-28 00:06:01
 categories: personal
+header: header-2013-08-28-welcome-to-jekyll.png
+thumbnail: thumbnail-2013-08-28-welcome-to-jekyll.png
+emphasized: true
+location: Budapest
+tags:
+ - (mt)
+ - jekyll
 comments: true
 ---
 
