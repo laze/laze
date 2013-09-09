@@ -3,7 +3,7 @@ destination: ./_site
 plugins:     ./_plugins
 layouts:     ./_layouts
 include:     ['.htaccess']
-exclude:     ['rss.xml']
+exclude:     ['rss', 'rss.xml']
 keep_files:  ['.git','.svn']
 timezone:    Europe/Budapest
 

@@ -13,15 +13,15 @@ tags:
 comments: true
 ---
 
-Az utóbbi időben ismét csendesen működő blogom története újabb fordulóponthoz érkezett: Wordpressről Jekyllre cseréltem
-a motort, és bár a (mt) hosztolja az oldalaimat továbbra is, ezt az egyszerűség kedvéért github oldalak alá tettem fel.
+Az utóbbi időben csendesen működő blogom története ismét újabb fordulóponthoz érkezett: Wordpressről Jekyllre cseréltem
+a motort.
 
 <!--more-->
 
-A Jekyllről a [hivatalos oldalon][jekyll] találsz bővebb információt. Dióhéjban: A Jekyll egy igen egyszerű valami:
+A Jekyllről a [hivatalos oldalon][jekyll-official] találsz bővebb információt. Dióhéjban: A Jekyll egy igen egyszerű valami:
 Megfelelő struktúrába rendezett és megfelelő szerkezetű oldalakból épít fel egy működés közben statikus oldalt. Nincs
 tehát webes, vagy bármilyen szerkesztői rendszer, nincsenek idétlen frissítések, _on the fly_ szerkesztett sablonok,
-nincsenek bugyuta _query_-k, csak pusztán a sablon, és tartalmak.
+nincsenek bugyuta _query_-k, csak pusztán a sablonok, és tartalmak.
 
 > Sok esetben nálam pont a Wordpress volt a visszatartó tényező mindenféle dolgok publikálásában: Sosem voltam elégedett
 > a megjelenéssel, amit sikerült ráhúznom, úgy éreztem, az eredeti elképzeléseimet nem nagyon képes visszaadni, illetve
@@ -57,6 +57,6 @@ Ezek statikus állományok, az állomány elején némi konfigurációs lehetős
 használja szövegek gyors, egyszerű WYSIWYG szövegszerkesztők használata nélküli szerkesztéshez, amit nagy örömömre a Jekyll
 szintén ismer.
 
-[jekyll]:       http://jekyllrb.com
-[jekyll-local]: http://localhost:4000
-[markdown]:     http://daringfireball.net/projects/markdown/basics
+[jekyll-official]:  http://jekyllrb.com
+[jekyll-obama]:     http://kylerush.net/blog/meet-the-obama-campaigns-250-million-fundraising-platform/
+[markdown]:         http://daringfireball.net/projects/markdown/basics

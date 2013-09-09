@@ -121,7 +121,6 @@ div.social .flipper, div.content-header .flipper {
     transition: 0.4s;
     transform-style: preserve-3d;
 
-    position: relative;
     display: block;
 }
 
@@ -215,24 +214,23 @@ div.content-menu>nav a {
 }
 
 div.content-header {
-    background-color: #ffffff;
+    /*background-color: #ffffff;*/
     /*position: absolute;*/
     /*top: 0;*/
     /*left: 180px;*/
     height: 90px;
-    width: 100%;
     margin-left: 180px;
+    padding-top: 10px;
 }
 
 div.content-header>.title {
+    background-color: #ffffff;
     font-size: 32px;
     color: #cb187c;
     text-transform: uppercase;
     font-weight: 300;
     padding-left: 10px;
-    padding-top: 10px;
-    /*margin-top: 10px;*/
-    height: 45px;
+    margin-right: 180px;
 
     text-wrap: none;
     white-space: nowrap;
@@ -244,17 +242,20 @@ div.content-header>div.shortcut {
 }
 
 div.content-header>div.shortcut>span {
+    background-color: #ffffff;
     color: #57caf3;
-    margin-left: 10px;
+    padding: 0 10px 0 10px;
     font-weight: 300;
-    font-size: 18px;
-    line-height: 20px;
+    font-size: 16px;
+    line-height: 16px;
     text-transform: uppercase;
 }
 
 div.content-container {
     background-color: #ffffff;
     clear: both;
+    margin-right: 180px;
+    padding-top: 10px;
 }
 
 div.posts {
@@ -265,6 +266,7 @@ div.posts {
 div.posts>article {
     float: none;
     margin-bottom: 10px;
+    height: auto;
 }
 
 div.posts>article.emphasized>img {
@@ -353,6 +355,7 @@ blockquote p {
 div.content-container>article {
     margin: 0 10px 10px 10px;
     padding-bottom: 1px;
+    height: auto;
 }
 
 div.content-container>article .meta {
@@ -400,7 +403,7 @@ footer {
     font-size: 11px;
     float: none;
     clear: both;
-    height: 125px;
+    height: auto;
     margin: 80px 180px 0 180px;
     /*width: 90em;*/
     /*bottom: 0;*/

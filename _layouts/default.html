@@ -86,13 +86,13 @@
             </div>
         </a>
     </div>
-    <div class="twitter">&nbsp;Ide jön a twitter üzenet...&nbsp;</div>
+    <!--<div class="twitter">&nbsp;Ide jön a twitter üzenet...&nbsp;</div>-->
 </div>
 <div class="content visible-md visible-lg">
     <div class="menu">
         <div class="title">{{ page.title }}</div>
         <nav>
-            {% for node in site.pages %}
+            {% for node in site.pages limit: 3 %}
             {% if node.url != page.url && node.url contains 'html' %}
             <a href="{{node.url}}">{{node.title}}</a>
             {% endif %}
