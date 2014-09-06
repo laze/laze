@@ -1,0 +1,31 @@
+---
+layout: content
+background: background-alejandroescamilla_somethingpretty.jpg
+---
+
+<article style="padding-top:10px;">
+
+
+    {{ content }}
+
+    <div class="meta">
+        <div><i class="icon-map-marker" style="display: inline-block; width: 40px;"></i> {{ page.location}}</div>
+        <div><i class="icon-calendar-empty" style="display: inline-block; width: 40px;"></i> {{ page.date | date: "%Y %B %d. &mdash; %H:%M" }}</div>
+        <div><i class="icon-tags" style="display: inline-block; width: 40px;"></i> {{ page.tags | array_to_sentence_string }}</div>
+        <div><i class="icon-stop" style="display: inline-block; width: 40px;"></i> {{ page.author }}</div>
+    </div>
+</article>
+<div class="posts">
+    {% for post in site.categories["personal"] limit: 10 %}
+    {% if post.emphasized == false and page.url != post.url %}
+    <article>
+        <h1><a href="{{ post.url }}">{{ post.title }}</a>
+        <span class="meta">
+            <span><i class="icon-calendar-empty"></i> {{ post.date | date_to_string }}</span>
+            <span><i class="icon-tags"></i> {{ post.tags | array_to_sentence_string }}</span>
+        </span>
+        </h1>
+    </article>
+    {% endif %}
+    {% endfor %}
+</div>

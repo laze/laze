@@ -1,24 +1,24 @@
----
-layout: post
-title:  "M&aacute;sik c&iacute;m"
-date:   2013-09-08 00:06:01
-categories: personal
-emphasized: false
-tags:
- - (mt)
- - jekyll
-comments: true
----
-
-Az utóbbi időben ismét csendesen működő blogom története újabb fordulóponthoz érkezett: Wordpressről Jekyllre cseréltem
-a motort, és bár a (mt) hosztolja az oldalaimat továbbra is, ezt az egyszerűség kedvéért github oldalak alá tettem fel.
+Az utóbbi időben csendesen működő blogom története ismét újabb fordulóponthoz érkezett: Frissítettem a megjelenést és
+Wordpressről Jekyllre cseréltem motort.
 
 <!--more-->
 
-A Jekyllről a [hivatalos oldalon][jekyll] találsz bővebb információt. Dióhéjban: A Jekyll egy igen egyszerű valami:
+A megjelenés amennyire forradalminak tűnt az elején, éppen annyira nem volt tökéletes, hemzsegett a kényszermegoldásoktól,
+és a hibáktól. Az újabb megjelenésnél követtem a réginél elkezdett _flat_ iskola szerinti kialakítást és miközben igyekeztem
+fenntartani a kontrasztot, egyben barátságosabb színekre is váltottam. Az aloldalak a kezdőoldaltól különböző megjelenést
+kaptak -- és bár itt még futnom kell pár kör tesztet azért -- az oldal elemeit igyekeztem reszponzív módon összeállítani.
+
+A megjelenés készítése során igyekeztem minél egyszerűbben megoldani a dolgokat, a HTML5 és a CSS3 eszköztárával. A fejlécben
+az átfordul csempék például natív CSS3 megoldások.
+
+A Jekyllről a [hivatalos oldalon][jekyll-official] találsz bővebb információt, dióhéjban: A Jekyll egy igen egyszerű valami:
 Megfelelő struktúrába rendezett és megfelelő szerkezetű oldalakból épít fel egy működés közben statikus oldalt. Nincs
 tehát webes, vagy bármilyen szerkesztői rendszer, nincsenek idétlen frissítések, _on the fly_ szerkesztett sablonok,
-nincsenek bugyuta _query_-k, csak pusztán a sablon, és tartalmak.
+nincsenek bugyuta _query_-k, csak pusztán a sablonok, és tartalmak. Úgy mondják, "blogolj, mint egy hekker" és nagyjából
+tényleg valahol itt van a megoldás: összepakolhatod a megjelenítést natúr HTML + CSS kombinációval, a tartalmat pedig megírod
+bármiben, esetemben a legegszerűbb módon, valamelyik fejlesztői eszközben.
+Én egyelőre generálás után feltöltöm FTP-vel, de ha a github pages-t használod, egy egyszerű kommit is elég.
+
 
 > Sok esetben nálam pont a Wordpress volt a visszatartó tényező mindenféle dolgok publikálásában: Sosem voltam elégedett
 > a megjelenéssel, amit sikerült ráhúznom, úgy éreztem, az eredeti elképzeléseimet nem nagyon képes visszaadni, illetve
@@ -44,7 +44,7 @@ Innentől kezdve gyakorlatilag a Jekyll a rendelkezésünkre áll.
 ~ $ cd az-en-csodalatos-oldalam
 ~/az-en-csodalatos-oldalam $ jekyll serve
 {% endhighlight %}
-Ezek után a [http://localhost:4000][jekyll-local] linken nézegethetjük az új csodálatos oldalunkat.
+Ezek után a http://localhost:4000 linken nézegethetjük az új csodálatos oldalunkat.
 
 A `jekyll serve` parancs csak a teszteléshez használandó éles környezetben az exportált tartalom adja az oldal megjelenítését.
 (Ez alapértelmezés szerint a `_site` mappában kap helyet.)
@@ -54,6 +54,7 @@ Ezek statikus állományok, az állomány elején némi konfigurációs lehetős
 használja szövegek gyors, egyszerű WYSIWYG szövegszerkesztők használata nélküli szerkesztéshez, amit nagy örömömre a Jekyll
 szintén ismer.
 
-[jekyll]:       http://jekyllrb.com
-[jekyll-local]: http://localhost:4000
-[markdown]:     http://daringfireball.net/projects/markdown/basics
+
+[jekyll-official]:  http://jekyllrb.com
+[jekyll-obama]:     http://kylerush.net/blog/meet-the-obama-campaigns-250-million-fundraising-platform/
+[markdown]:         http://daringfireball.net/projects/markdown/basics

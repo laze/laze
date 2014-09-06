@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Latest compiled and minified CSS -->
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <!--<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">-->
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
     <!-- Google Fonts API -->
-    <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700&subset=latin,latin-ext' rel='stylesheet'
-          type='text/css'>
+    <!--<link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>-->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300italic,300,700,900,500,100&subset=latin-ext' rel='stylesheet' type='text/css'>
 
     <!-- jQuery -->
     <script src="//code.jquery.com/jquery.js"></script>
@@ -24,7 +24,8 @@
     <link rel="stylesheet" href="/css/syntax.css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/laze.css">
+    <link rel="stylesheet" href="/css/default.css">
+    <link rel="stylesheet" href="/css/flip.css">
 
     <!-- Google Analytics -->
     <script type="text/javascript">
@@ -33,109 +34,90 @@
         _gaq.push(['_setAccount', 'UA-415320-11']);
         _gaq.push(['_trackPageview']);
 
-        (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
         })();
 
     </script>
 
 </head>
 <body style="{% if page.background %} background-image: url(/img/{{ page.background }});{% endif %}">
-<!-- desktop -->
-<div class="header visible-md visible-lg">
-    <div class="cover"{% if page.header %} style="background-image: url(/img/{{ page.header }});"{% endif %}>
-        <div>&nbsp;</div>
-    </div>
-</div>
-<div class="social visible-md visible-lg">
-    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-        <a class="flipper" href="http://lnkd.in/_ngmiH">
-            <div class="front">
-                <!-- front content -->
-                <i class="icon-linkedin-sign"></i>
+<a name="top"></a>
+<div class="wrap">
+    <div class="left">
+        <div class="image"{% if page.header %} style="background-image: url(/img/{{ page.header }});"{% endif %}>
+            <div class="laze">
+                LAZE
             </div>
-            <div class="back">
-                <!-- back content -->
-                <i class="icon-linkedin" style="color: #ffffff;"></i>
-            </div>
-        </a>
-    </div>
-    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-        <a class="flipper" href="http://facebook.com/laze.hu">
-            <div class="front">
-                <!-- front content -->
-                <i class="icon-facebook-sign"></i>
-            </div>
-            <div class="back">
-                <!-- back content -->
-                <i class="icon-facebook" style="color: #ffffff;"></i>
-            </div>
-        </a>
-    </div>
-    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-        <a class="flipper" href="http://twitter.com/laze">
-            <div class="front">
-                <!-- front content -->
-                <i class="icon-twitter-sign"></i>
-            </div>
-            <div class="back">
-                <!-- back content -->
-                <i class="icon-twitter" style="color: #ffffff;"></i>
-            </div>
-        </a>
-    </div>
-    <!--<div class="twitter">&nbsp;Ide jön a twitter üzenet...&nbsp;</div>-->
-</div>
-<div class="content visible-md visible-lg">
-    <div class="menu">
-        <div class="title">{{ page.title }}</div>
-        <nav>
-            {% for node in site.pages limit: 3 %}
-            {% if node.url != page.url && node.url contains 'html' %}
-            <a href="{{node.url}}">{{node.title}}</a>
-            {% endif %}
-            {% endfor %}
-        </nav>
-    </div>
-    <div>
-    {{ content }}
-    </div>
-</div>
-
-<!-- pad or mobile device -->
-<div class="header small visible-xs visible-sm">
-    <div class="cover"{% if page.header %} style="background-image: url(/img/{{ page.header }});"{% endif %}>
-        <div>&nbsp;</div>
-    </div>
-</div>
-<div class="content-header visible-xs visible-sm">
-    <div class="title">{{ page.title }}</div>
-    <div class="shortcut">
-        <div class="flip-container" ontouchstart="this.classList.toggle('hover');" style="float: left;">
-            <a class="flipper" href="#menu">
-                <div class="front">
-                    <!-- front content -->
-                    <i class="icon-angle-down"></i>
-                </div>
-                <div class="back">
-                    <!-- back content -->
-                    <i class="icon-chevron-down" style="color: #ffffff;"></i>
-                </div>
-            </a>
         </div>
-        <span>Menü</span>
+    </div>
+    <div class="main">
+        <header>
+            <nav>
+                <ul class="top">
+                    <li class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                        <a class="flipper horizontal" href="http://lnkd.in/_ngmiH">
+                            <div class="front">
+                                <!-- front content -->
+                                <i class="icon-linkedin-sign"></i>
+                            </div>
+                            <div class="back">
+                                <!-- back content -->
+                                <i class="icon-linkedin"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                        <a class="flipper horizontal" href="http://facebook.com/laze.hu">
+                            <div class="front">
+                                <!-- front content -->
+                                <i class="icon-facebook-sign"></i>
+                            </div>
+                            <div class="back">
+                                <!-- back content -->
+                                <i class="icon-facebook"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                        <a class="flipper horizontal" href="http://twitter.com/laze">
+                            <div class="front">
+                                <!-- front content -->
+                                <i class="icon-twitter-sign"></i>
+                            </div>
+                            <div class="back">
+                                <!-- back content -->
+                                <i class="icon-twitter"></i>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="content">
+            <nav>
+                <ul>
+                    <li class="title">{{ page.title }}</li>
+                    {% for node in site.pages limit: 3 %}
+                    {% if node.url != page.url && node.url contains 'html' %}
+                    <li><a href="{{node.url}}">{{node.title}}</a></li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </nav>
+            {{ content }}
+            <div class="clear">
+            </div>
+            <a href="#top" style="margin: 0 0 10px 10px;"><i class="icon-chevron-up"></i></a>
+        </div>
     </div>
 </div>
-<div class="content-container visible-xs visible-sm">
-    {{ content }}
-    <a name="menu"/>
-    <div class="content-menu">
-        <nav>
-            {% for node in site.pages %}{% if node.url != page.url %}<a href="{{node.url}}">{{node.title}}</a>{% endif %}{% endfor %}
-        </nav>
-    </div>
+<div class="clear">
 </div>
 {% include footer.html %}
 </body>
